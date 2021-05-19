@@ -1,0 +1,20 @@
+.navbar {
+    border-bottom: 1px solid $grey;
+
+    &__logo {
+        max-height: 100px;
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+        color: darken($grey,10%);
+        border-right: 1px solid $grey;
+        padding: 0 30px;
+    }
+
+    &__login {
+        font-size: 1.1rem;
+        color: darken($grey, 30%);
+        padding: 0 30px;
+    }
+}

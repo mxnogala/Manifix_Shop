@@ -1,0 +1,25 @@
+.menu {
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        display:none;
+        border: 1px solid $grey;
+        
+        &-active {
+            display: block;
+        }
+    }
+
+    &__btn {
+        padding: 20px;
+        background-color: transparent;
+        border:none;    
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        padding: 10px 20px;
+    }
+
+}
