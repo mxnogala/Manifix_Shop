@@ -2,17 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Models\Category;
+use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return view('welcome');
+
+Auth::routes();
+
+Route::get('/', function() {
+    return view('index', [
+        'categories'=>Category::all()
+    ]);
 });
+    
+Route::get('/products/{category:slug}', [ProductController::class, 'show']);
 
-Auth::routes();
+ROute::get('product/{product:slug}', [ProductController::class, 'index']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/test', [CategoryController::class, 'index']); 

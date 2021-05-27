@@ -8,5 +8,23 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import './basic';
 @import "./navbar";
 @import "./_menu";
+
+.brand {
+    max-width: 100vw;
+
+}
+
+.contact {
+    border: 1px solid $grey;
+    padding: 40px 0;
+    &__info {
+        margin: 0;
+    }
+}
+
+body {
+    color: $blue;
+}
