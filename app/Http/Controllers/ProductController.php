@@ -12,7 +12,11 @@ class ProductController extends Controller
 {
     public function index(Product $product) 
     {
-        echo $product;
+        $categories = Category::all();
+        return view('product', [
+            'product'=>$product, 
+            'categories'=>$categories
+        ]);
     }
     public function show(Category $category)
     {
